@@ -10,9 +10,25 @@ class Assets {
   /// assets/images/circles.svg
   static const String imagesCircles = "assets/images/circles.svg";
 
+  /// Assets for imagesFruitBasket
+  /// assets/images/fruit_basket.svg
+  static const String imagesFruitBasket = "assets/images/fruit_basket.svg";
+
+  /// Assets for imagesFruitBasketBackground
+  /// assets/images/fruit_basket_background.svg
+  static const String imagesFruitBasketBackground = "assets/images/fruit_basket_background.svg";
+
   /// Assets for imagesFruitsHub
   /// assets/images/fruits_hub.svg
   static const String imagesFruitsHub = "assets/images/fruits_hub.svg";
+
+  /// Assets for imagesPinableBackgroundImage
+  /// assets/images/pinable_background_image.svg
+  static const String imagesPinableBackgroundImage = "assets/images/pinable_background_image.svg";
+
+  /// Assets for imagesPineapple
+  /// assets/images/pineapple.svg
+  static const String imagesPineapple = "assets/images/pineapple.svg";
 
   /// Assets for imagesPlant
   /// assets/images/plant.svg

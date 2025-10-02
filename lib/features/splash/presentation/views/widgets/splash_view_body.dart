@@ -23,7 +23,10 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(children: [SvgPicture.asset(Assets.imagesPlant)]),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [SvgPicture.asset(Assets.imagesPlant)],
+        ),
         SvgPicture.asset(Assets.imagesFruitsHub),
         SvgPicture.asset(Assets.imagesCircles, fit: BoxFit.fill),
       ],
@@ -31,7 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   void excuteNavigation() {
-    final duration = const Duration(seconds: 3);
+    final duration = const Duration(seconds: 20);
     Future.delayed(duration, () {
       Navigator.pushReplacementNamed(context, OnboardingView.routeName);
     });
