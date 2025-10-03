@@ -4,13 +4,17 @@ import 'package:fruits_e_commerce/core/utils/app_images.dart';
 import 'package:fruits_e_commerce/features/onboarding/presentation/views/widgets/page_item.dart';
 
 class OnboardingPageView extends StatelessWidget {
-  const OnboardingPageView({super.key});
-
+  const OnboardingPageView({super.key, required this.pageController});
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         PageItem(
+          isVisible:
+              (pageController.hasClients ? pageController.page!.round() : 0) ==
+              0, // true
           image: Assets.imagesFruitBasket,
           backgroundImage: Assets.imagesFruitBasketBackground,
           subtitle:
@@ -53,6 +57,9 @@ class OnboardingPageView extends StatelessWidget {
         ),
 
         PageItem(
+          isVisible:
+              (pageController.hasClients ? pageController.page!.round() : 0) !=
+              0,
           image: Assets.imagesPineapple,
           backgroundImage: Assets.imagesPinableBackgroundImage,
           subtitle:
