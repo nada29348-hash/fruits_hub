@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce/core/utils/app_images.dart';
+import 'package:fruits_e_commerce/core/utils/app_text_styles.dart';
 import 'package:fruits_e_commerce/features/onboarding/presentation/views/widgets/page_item.dart';
 
 class OnboardingPageView extends StatelessWidget {
@@ -12,9 +13,8 @@ class OnboardingPageView extends StatelessWidget {
       controller: pageController,
       children: [
         PageItem(
-          isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) ==
-              0, // true
+          isVisible: true,
+          // true
           image: Assets.imagesFruitBasket,
           backgroundImage: Assets.imagesFruitBasketBackground,
           subtitle:
@@ -22,34 +22,17 @@ class OnboardingPageView extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text('مرحبا بك في', style: AppTextStyles.bold23),
               Text(
-                'مرحبا بك في',
-                style: TextStyle(
-                  color: Color(0xff0C0D0D),
-                  fontSize: 23,
-                  fontFamily: 'Cairo',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
-                ),
-              ),
-              Text(
-                'HUB',
-                style: TextStyle(
-                  color: AppColors.primaryColor,
-                  fontSize: 23,
-                  fontFamily: 'Cairo',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
+                ' HUB',
+                style: AppTextStyles.bold23.copyWith(
+                  color: AppColors.secondaryColor,
                 ),
               ),
               Text(
                 'Fruit',
-                style: TextStyle(
+                style: AppTextStyles.bold23.copyWith(
                   color: AppColors.primaryColor,
-                  fontSize: 23,
-                  fontFamily: 'Cairo',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
                 ),
               ),
             ],
@@ -57,9 +40,7 @@ class OnboardingPageView extends StatelessWidget {
         ),
 
         PageItem(
-          isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) !=
-              0,
+          isVisible: false,
           image: Assets.imagesPineapple,
           backgroundImage: Assets.imagesPinableBackgroundImage,
           subtitle:

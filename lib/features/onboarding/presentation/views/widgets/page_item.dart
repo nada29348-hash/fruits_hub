@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits_e_commerce/core/utils/app_text_styles.dart';
 
 class PageItem extends StatelessWidget {
   const PageItem({
@@ -36,7 +37,12 @@ class PageItem extends StatelessWidget {
                 visible: isVisible,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
-                  child: const Text('تخط'),
+                  child: Text(
+                    'تخط',
+                    style: AppTextStyles.Regular13.copyWith(
+                      color: Color(0xff949D9E),
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -46,8 +52,12 @@ class PageItem extends StatelessWidget {
         title,
         SizedBox(height: 24),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(subtitle, textAlign: TextAlign.center),
+          padding: const EdgeInsets.symmetric(horizontal: 37),
+          child: Text(
+            subtitle,
+            style: AppTextStyles.SemiBold13.copyWith(color: Color(0xff4E5456)),
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     );
