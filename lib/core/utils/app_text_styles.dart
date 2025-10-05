@@ -12,17 +12,17 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: Color(0xff0C0D0D),
   );
-  static const TextStyle SemiBold13 = TextStyle(
+  static const TextStyle semiBold13 = TextStyle(
     fontSize: 13,
     fontWeight: FontWeight.w600,
     color: Color(0xff0C0D0D),
   );
-  static const TextStyle Regular13 = TextStyle(
+  static const TextStyle regular13 = TextStyle(
     fontSize: 13,
     fontWeight: FontWeight.normal,
     color: Color(0xff0C0D0D),
   );
-  static const TextStyle cairoBold16 = TextStyle(
+  static const TextStyle bold16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.bold,
     color: Color(0xff0C0D0D),

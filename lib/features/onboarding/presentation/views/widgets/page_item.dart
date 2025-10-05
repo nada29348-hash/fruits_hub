@@ -49,7 +49,7 @@ class PageItem extends StatelessWidget {
                     padding: const EdgeInsets.all(16),
                     child: Text(
                       'تخط',
-                      style: AppTextStyles.Regular13.copyWith(
+                      style: AppTextStyles.regular13.copyWith(
                         color: Color(0xff949D9E),
                       ),
                     ),
@@ -66,7 +66,7 @@ class PageItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 37),
           child: Text(
             subtitle,
-            style: AppTextStyles.SemiBold13.copyWith(color: Color(0xff4E5456)),
+            style: AppTextStyles.semiBold13.copyWith(color: Color(0xff4E5456)),
             textAlign: TextAlign.center,
           ),
         ),
