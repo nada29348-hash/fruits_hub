@@ -38,4 +38,5 @@ class Assets {
   static const String imagesGoogle = "assets/images/google.svg";
   static const String imagesFaceBook = "assets/images/facebook.svg";
   static const String imagesApple = "assets/images/apple.svg";
+  static const String imagesCheck = "assets/images/check.svg";
 }

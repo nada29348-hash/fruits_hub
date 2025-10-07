@@ -4,8 +4,8 @@ import 'package:fruits_e_commerce/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce/core/utils/app_text_styles.dart';
 import 'package:fruits_e_commerce/features/auth/presentation/views/sign_up_view.dart';
 
-class DontHaveAnAccountWidget extends StatelessWidget {
-  const DontHaveAnAccountWidget({super.key});
+class HaveAnAccount extends StatelessWidget {
+  const HaveAnAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +13,15 @@ class DontHaveAnAccountWidget extends StatelessWidget {
       TextSpan(
         children: [
           TextSpan(
-            text: 'لا تمتلك حساب؟ ',
+            text: 'تمتلك حساب بالفعل؟',
             style: AppTextStyles.semiBold16.copyWith(color: Color(0XFF949D9E)),
           ),
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                Navigator.pushNamed(context, SignUpView.routeName);
+                Navigator.pop(context);
               },
-            text: 'قم بأنشاء حساب',
+            text: 'تسجيل دخول',
             style: AppTextStyles.semiBold16.copyWith(
               color: AppColors.primaryColor,
             ),
