@@ -5,8 +5,8 @@ import 'package:fruits_e_commerce/core/utils/app_text_styles.dart';
 import 'package:fruits_e_commerce/features/auth/presentation/views/widgets/custom_check_box.dart';
 
 class TermsAndConditions extends StatefulWidget {
-  const TermsAndConditions({super.key});
-
+  const TermsAndConditions({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   State<TermsAndConditions> createState() => _TermsAndConditionsState();
 }
@@ -14,6 +14,7 @@ class TermsAndConditions extends StatefulWidget {
 class _TermsAndConditionsState extends State<TermsAndConditions> {
   bool isTermsAccepted =
       false; //حاله شيك بوكس بتتغير هنا فعشان كدا خلتها statefull
+
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
@@ -27,6 +28,7 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
             isChecked: isTermsAccepted,
             onChecked: (value) {
               isTermsAccepted = value;
+              widget.onChanged(value);
               setState(() {});
             },
           ),
